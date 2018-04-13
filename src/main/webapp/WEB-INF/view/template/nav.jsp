@@ -57,7 +57,6 @@
                <ul class="dropdown-menu">
                   <li><a href="<c:url value="/login/"/>">로그인</a></li>
                   <li><a href="<c:url value="/join/"/>">회원가입</a></li>
-                  <li><a href="<c:url value="/admin/"/>">관리자 모드</a></li>
                </ul></li>
          </ul>
          <%

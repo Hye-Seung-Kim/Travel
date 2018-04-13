@@ -8,15 +8,19 @@
 	<mvc:annotation-driven />
 	
 	<mvc:resources mapping="/static/**" location="/WEB-INF/static/" />
-
+	
+	<bean	id="travelDao"
+			class="com.hs.travel.dao.TravelDaoImpl">
+	
+	</bean>
 
 	<bean id="memberController"
 		  class="com.hs.member.web.MemberController">
-	
+		
 	</bean>
 	<bean id="travelController"
 		  class="com.hs.travel.web.TravelController">
-	
+		<!-- <property name="travelService" ref="travelService" /> -->
 	</bean>
 
 	<bean id="viewResolver"
@@ -24,5 +28,10 @@
 		<property name="prefix" value="/WEB-INF/view/" />
 		<property name="suffix" value=".jsp" />	 
 	</bean>
-
+	
+	<bean id="validator"
+		  class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+	
+	</bean>
+	
 </beans>

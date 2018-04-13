@@ -19,49 +19,91 @@
    crossorigin="anonymous">
 </head>
 <body>
-   <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-   <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-      crossorigin="anonymous"></script>
 
 	<jsp:include page="/WEB-INF/view/template/nav.jsp" />
-	<div class="container">
-		<div class="col-lg-4"></div>
-		<div class="col-lg-4">
-			<div class="jumbotron" style="padding-top: 20px">
-				<form method="post" action="joinAction.jsp">
-					<h3 style="text-align: center;">회원가입화면</h3>
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="아이디" name="userID" maxlength="20">
-					</div>
-					<div class="form-group">
-						<input type="password" class="form-control" placeholder="비밀번호" name="userPassword" maxlength="20">
-					</div>
-					<div class="form-group">
-						<input type="password" class="form-control" placeholder="비밀번호확인" name="userPasswordcheck" maxlength="20">
-					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="이름" name="userName" maxlength="20">
-					</div>
-					<div class="form-group">
-						<input type="email" class="form-control" placeholder="이메일" name="userEmail" maxlength="50">
-					</div>
-					<div class="form-group" style="text-align: center;">
-						<div class="btn-group" data-toggle="buttons">
-							<label class="btn btn-primary active">
-								<input type="radio" class="userGender" autocomplete="off" value="남자" checked>남자
-							</label>
-							<label class="btn btn-primary">
-								<input type="radio" class="userGender" autocomplete="off" value="여자" checked>여자
-							</label>
-						</div>
-					</div>
-					<input type="submit" class="btn btn-primary form-control" value="회원가입">
-				</form>
-			</div>
-		</div>
-	</div>
+	
+	
+	<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>bootstrap template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
+    <!-- Custom style -->
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+
+      <article class="container">
+        <div class="page-header">
+          <h1>회원가입</h1>
+        </div>
+        <div class="col-md-6 col-md-offset-3">
+          <form role="form">
+            <div class="form-group">
+              <label for="InputEmail">이메일 주소</label>
+              <input type="email" class="form-control" id="InputEmail" placeholder="이메일 주소">
+            </div>
+            <div class="form-group">
+              <label for="InputPassword1">비밀번호</label>
+              <input type="password" class="form-control" id="InputPassword1" placeholder="비밀번호">
+            </div>
+            <div class="form-group">
+              <label for="InputPassword2">비밀번호 확인</label>
+              <input type="password" class="form-control" id="InputPassword2" placeholder="비밀번호 확인">
+              <p class="help-block">비밀번호 확인을 위해 다시한번 입력 해 주세요</p>
+            </div>
+            <div class="form-group">
+              <label for="username">이름</label>
+              <input type="text" class="form-control" id="username" placeholder="이름을 입력해 주세요">
+            </div>
+            <div class="form-group">
+              <label for="username">휴대폰 인증</label>
+              <div class="input-group">
+                <input type="tel" class="form-control" id="username" placeholder="- 없이 입력해 주세요">
+                <span class="input-group-btn">
+                  <button class="btn btn-success">인증번호 전송<i class="fa fa-mail-forward spaceLeft"></i></button>
+                </span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="username">인증번호 입력</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="username" placeholder="인증번호">
+                <span class="input-group-btn">
+                  <button class="btn btn-success">인증번호 입력<i class="fa fa-edit spaceLeft"></i></button>
+                </span>
+              </div>
+            </div>
+            <div class="form-group">
+                <label>약관 동의</label>
+              <div data-toggle="buttons">
+              <label class="btn btn-primary active">
+                  <span class="fa fa-check"></span>
+                  <input id="agree" type="checkbox" autocomplete="off" checked="">
+              </label>
+              <a href="#">이용약관</a>에 동의합니다.
+              </div>
+            </div>
+            <div class="form-group text-center">
+              <button type="submit" class="btn btn-info">회원가입<i class="fa fa-check spaceLeft"></i></button>
+              <button type="submit" class="btn btn-warning">가입취소<i class="fa fa-times spaceLeft"></i></button>
+            </div>
+          </form>
+        </div>
 	
 	
 </body>

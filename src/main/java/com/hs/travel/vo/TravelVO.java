@@ -1,22 +1,36 @@
 package com.hs.travel.vo;
 
+import javax.validation.constraints.NotEmpty;
+
 import org.springframework.web.multipart.MultipartFile;
 
 public class TravelVO {
 	private int id;
 	
+	@NotEmpty(message="제목은 필수 입력입니다.")
 	private String title;
+	@NotEmpty(message="내용은 필수 입력입니다.")
 	private String body;
 	private String nickname;
+	@NotEmpty(message="로그인이 필요합니다.")
 	private String userId;
+	@NotEmpty(message="작성일을 선택해 주세요.")
 	private String writeDate;
+	@NotEmpty(message="카테고리를 선택해주세요.")
 	private String category;
+	@NotEmpty(message="장소를 입력해주세요.")
 	private String location;
+	@NotEmpty(message="교통을 입력해주세요.")
 	private String transportation;
+	@NotEmpty(message="경비를 입력해주세요.")
+	private String expense;
 	//여행 숙소
+	@NotEmpty(message="숙소를 입력해주세요.")
 	private String accommodations;
 	//여행 준비물
+	@NotEmpty(message="준비물을 입력해주세요.")
 	private String luggage;
+	@NotEmpty(message="여행경로를 입력해주세요.")
 	private String route;
 	
 	
@@ -69,6 +83,7 @@ public class TravelVO {
 	private String requestIp;
 	private MultipartFile file;
 	private String displayFilename;
+	
 	
 	
 	

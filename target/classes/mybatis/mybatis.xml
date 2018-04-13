@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+ <configuration>
+ 
+ 	<typeAliases>
+ 		<typeAlias type="com.hs.travel.vo.TravelVO" alias="TravelVO"/>
+ 		<!-- alias=""=> 클래스명 적기 -->
+ 		<typeAlias type="com.hs.travel.vo.TravelSearchVO" alias="TravelSearchVO" />
+ 		<typeAlias type="com.hs.member.vo.MemberVO" alias="MemberVO" />
+ 		<typeAlias type="com.hs.reply.vo.ReplyVO" alias="ReplyVO" />
+ 		<typeAlias type="com.hs.actionhistory.vo.ActionHistoryVO" alias="ActionHistoryVO" />
+ 		<typeAlias type="com.hs.actionhistory.vo.ActionHistorySearchVO" alias="ActionHistorySearchVO" />
+ 	</typeAliases>
+ 
+ 	<mappers>
+ 		<mapper resource="/com/hs/travel/dao/sql/travelDao.xml" />
+ 		<mapper resource="/com/hs/member/dao/sql/memberDao.xml" />
+ 		<mapper resource="/com/hs/reply/dao/sql/replyDao.xml" />
+ 		<mapper resource="/com/hs/actionhistory/dao/sql/actionHistoryDao.xml" />
+ 	</mappers>
+ </configuration>
